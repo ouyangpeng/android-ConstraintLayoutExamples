@@ -60,6 +60,7 @@
         </ConstraintSet>
 
         <KeyFrameSet>
+            <!--KeyCycle用来给动画添加振动效果。可以通过提供诸如要使用的波形和波形周期等详细信息来配置KeyCycle。-->
             <KeyCycle
                 android:translationY="50dp"
                 motion:framePosition="100"
