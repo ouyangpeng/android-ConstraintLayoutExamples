@@ -27,10 +27,21 @@
             motion:touchAnchorSide="right"
             motion:dragDirection="dragRight" />
 
+        <!--KeyPosition 可以帮助视图改变运动路径的形状。
+            创建它们时，请确保提供目标视图的ID，沿时间轴的位置，可以是0到100之间的任意数字，以及指定X或Y坐标已经运行到的百分比。
+            可以设置type参数指出坐标是相对于实际的X或Y轴，还是相对于路径本身。 -->
+
         <KeyFrameSet>
+            <!--下面的KeyPosition代表button按钮在运行道25%的时候，相对于运行轨迹y已经运行了-25%了-->
             <KeyPosition
                 motion:keyPositionType="pathRelative"
                 motion:percentY="-0.25"
+                motion:framePosition="20"
+                motion:motionTarget="@id/button"/>
+            <!--下面的KeyPosition代表button按钮在运行道50%的时候，相对于运行轨迹y已经运行了25%了-->
+            <KeyPosition
+                motion:keyPositionType="pathRelative"
+                motion:percentY="0.25"
                 motion:framePosition="50"
                 motion:motionTarget="@id/button"/>
         </KeyFrameSet>
